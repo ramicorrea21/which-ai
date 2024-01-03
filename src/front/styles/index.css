@@ -27,3 +27,9 @@ background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, F
 .result:hover{
     background-color: #efefef;
 }
+
+.tool-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

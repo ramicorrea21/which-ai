@@ -17,14 +17,13 @@ const search = () => {
     })
   }
 
-
-
   const handleClick = (e) =>{
     navigate(`/tools/${e.target.innerText}`)
+    
   }
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid mt-3'>
       <form className="d-flex justify-content-center" role="search" autoComplete='off'>
         <input
           className="form-control me-2 col-sm-2 "
