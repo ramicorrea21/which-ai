@@ -6,7 +6,6 @@ export const categories = [
     "Object Detection",
     "Facial Recognition",
     "Gesture Recognition",
-    "Machine Learning Algorithms",
     "Deep Learning",
     "Reinforcement Learning",
     "Predictive Analytics",

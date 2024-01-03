@@ -1,8 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { categories } from '../utils/categories'
 import { Context } from '../store/appContext'
+import { useNavigate } from 'react-router-dom'
 
 const search = () => {
+  const navigate = useNavigate()
   const {store} = useContext(Context)
   const [category, setCategory] = useState({
     name: ""
@@ -15,8 +17,10 @@ const search = () => {
     })
   }
 
+
+
   const handleClick = (e) =>{
-    console.log(e.target.innerText)
+    navigate(`/tools/${e.target.innerText}`)
   }
 
   return (
