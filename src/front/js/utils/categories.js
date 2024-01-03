@@ -1,4 +1,4 @@
-const categories = [
+export const categories = [
     "Natural Language Processing",
     "Speech Recognition",
     "Computer Vision",

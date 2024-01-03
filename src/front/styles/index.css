@@ -10,3 +10,20 @@ background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, F
     align-items: center;
     justify-content: center;
 }
+.results{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.result{
+    text-align: center;
+}
+.result:hover{
+    background-color: #efefef;
+}

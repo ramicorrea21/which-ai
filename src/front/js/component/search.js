@@ -1,29 +1,47 @@
-import React, {useState, useContext, useEffect} from 'react'
-
+import React, { useState, useContext, useEffect } from 'react'
+import { categories } from '../utils/categories'
+import { Context } from '../store/appContext'
 
 const search = () => {
-    const [category, setCategory] = useState({
-        cateogry : ""
-        })
-    const handleChange = (e) =>{
-        setCategory({
-            [e.target.name] : e.target.value
-        })
-    }
+  const {store} = useContext(Context)
+  const [category, setCategory] = useState({
+    name: ""
+  })
+  const results = categories.filter((cat) => cat.toLocaleLowerCase().includes(category.name.toLocaleLowerCase()))
+
+  const handleChange = (e) => {
+    setCategory({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleClick = (e) =>{
+    console.log(e.target.innerText)
+  }
 
   return (
     <div className='container-fluid'>
-        <form className="d-flex justify-content-center" role="search">
-        <input 
-        className="form-control me-2 col-sm-2 " 
-        type="search" 
-        placeholder="Search"
-        aria-label="Search"
-        name="category"
-        value={category.cateogry}
-        onChange={handleChange}
-         />
+      <form className="d-flex justify-content-center" role="search" autoComplete='off'>
+        <input
+          className="form-control me-2 col-sm-2 "
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          name="name"
+          value={category.name}
+          onChange={handleChange}
+        />
       </form>
+      <div  className='results'>
+      {category.name == "" || category.name == " " ? <></> : results.map((res, index) => {
+          return (
+                <div key={index} className='result' onClick={handleClick}>
+                {res}
+                </div>
+          )
+        }
+      )}
+    </div>
     </div>
   )
 }
