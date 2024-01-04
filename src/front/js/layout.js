@@ -8,6 +8,7 @@ import { Tools } from "./pages/tools"
 import { Categs } from "./pages/categs";
 import { Addtool } from "./pages/addtool";
 import { Nav } from "./component/nav";
+import { Footer } from "./component/footer";
 
 
 //create your first component
@@ -29,6 +30,7 @@ const Layout = () => {
                         <Route element={<Categs/>} path="/categories"/>
                         <Route element={<Addtool/>} path="/addtool"/>
                     </Routes>
+                    <Footer/>
             </BrowserRouter>
         </div>
     );

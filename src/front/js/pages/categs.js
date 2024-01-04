@@ -14,7 +14,7 @@ export const Categs = () =>{
                     <ul className="list-group list-group-numbered">
                         {categories.map((cat) =>{
                             return(
-                                <Sections category={cat}/>
+                                <div key={cat}><Sections category={cat}/></div>
                             )
                         })}
                     </ul>
