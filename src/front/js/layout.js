@@ -6,6 +6,8 @@ import { Home } from "./pages/home";
 import injectContext from "./store/appContext";
 import { Tools } from "./pages/tools"
 import { Categs } from "./pages/categs";
+import { Addtool } from "./pages/addtool";
+import { Nav } from "./component/nav";
 
 
 //create your first component
@@ -19,11 +21,13 @@ const Layout = () => {
     return (
         <div>
             <BrowserRouter basename={basename}>
+                    <Nav/>
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<h1>Not found!</h1>} />
                         <Route element={<Tools/>} path="/tools/:category"/>
                         <Route element={<Categs/>} path="/categories"/>
+                        <Route element={<Addtool/>} path="/addtool"/>
                     </Routes>
             </BrowserRouter>
         </div>

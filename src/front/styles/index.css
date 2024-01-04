@@ -33,3 +33,12 @@ background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, F
     flex-direction: column;
     justify-content: center;
 }
+
+.categ{
+    width: 70vw;
+}
+
+.home{
+    text-underline-offset: none;
+    color: black;
+}

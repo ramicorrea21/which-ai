@@ -1,5 +1,6 @@
 import React from "react";
 import { categories } from "../utils/categories";
+import { Sections } from "../component/sections";
 
 export const Categs = () =>{
     return(
@@ -10,11 +11,13 @@ export const Categs = () =>{
         <div className="container d-flex justify-content-center mt-3">
             <div className="row">
                 <div className="col w-100">
-                    {categories.map((categ) => {
-                        return(
-                            <p>{categ}</p>
-                        )
-                    })}
+                    <ul className="list-group list-group-numbered">
+                        {categories.map((cat) =>{
+                            return(
+                                <Sections category={cat}/>
+                            )
+                        })}
+                    </ul>
                 </div>
 
             </div>
